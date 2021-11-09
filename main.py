@@ -1,4 +1,5 @@
 import telebot
+from telebot import types
 
 import botconfig
 
@@ -13,6 +14,10 @@ def open_file(path):                  # open file structure for open file like b
     
     return str
 
+
+@bot.message_handler(commands=['start' , 'ping' , 'p'])
+def send_message(message):
+    bot.reply_to(message, open_file("ping.txt"))
 
 bot.polling()
 

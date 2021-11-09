@@ -5,6 +5,7 @@ __pycache__/
 
 
 botconfig.py
+ping.txt
 
 # C extensions
 *.so
